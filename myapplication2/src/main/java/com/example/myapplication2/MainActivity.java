@@ -1,14 +1,13 @@
-package com.example.myapplication;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.myapplication2;
 
 import android.app.LoaderManager;
 import android.content.CursorLoader;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -17,7 +16,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
-public class MainActivity extends AppCompatActivity implements TextWatcher, LoaderManager.LoaderCallbacks<Cursor> {
+public class MainActivity extends AppCompatActivity implements TextWatcher, LoaderManager.LoaderCallbacks<Cursor>{
 
     EditText editText;
     ListView listView;
@@ -62,7 +61,6 @@ public class MainActivity extends AppCompatActivity implements TextWatcher, Load
         Bundle b = new Bundle();
         b.putString(FILTER_KEY,text);
         getLoaderManager().restartLoader(0, b, this);
-
     }
 
     @Override
